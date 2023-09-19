@@ -18,18 +18,56 @@
         background: #fff;
       }
       section,
+      div,
       iframe {
         width: 100%;
+      }
+      #hidden {
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+      }
+      .go {
+        font-size: 14px;
+        color: #515767;
+        margin-top: 10px;
       }
     </style>
   </head>
   <body>
-    <section>
-      <iframe src="./components/HeaderInfo.html" frameborder="0"></iframe>
+    <section id="resume">
+      <div>
+        <iframe src="./components/HeaderInfo.html" frameborder="0"></iframe>
+      </div>
+      <div>
+        <!-- 主体信息 -->
+        <iframe src="./components/MainInfo.html" frameborder="0"></iframe>
+      </div>
     </section>
-    <section>
-      <!-- 主体信息 -->
-      <iframe src="./components/MainInfo.html" frameborder="0"></iframe>
+    <section id="hidden">
+      <p>在线简历暂不对外开放～</p>
+      <p class="go">正在前往个人主页...</p>
     </section>
   </body>
+  <script>
+    const goBlog = () => {
+      setTimeout(() => {
+        const url = 'https://www.looseli.top';
+        window.location.href = url;
+      }, 3000);
+    };
+
+    const show = false;
+
+    let resumeEl = document.getElementById('resume');
+    let hiddenEl = document.getElementById('hidden');
+    if (!show) {
+      hiddenEl.style.display = 'visible';
+      resumeEl.parentNode.removeChild(resumeEl);
+      goBlog();
+    } else {
+      resumeEl.style.display = 'visible';
+      hiddenEl.parentNode.removeChild(hiddenEl);
+    }
+  </script>
 </html>
