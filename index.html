@@ -9,18 +9,23 @@
         margin: 0;
         padding: 0;
       }
+      html,
+      body {
+        user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+      }
       html {
         background: #f2f3f5;
       }
       body {
-        margin: 40px;
-        padding: 60px;
+        max-width: 640px;
+        margin: 40px auto;
+        padding: 40px;
         background: #fff;
       }
-      section,
-      div,
-      iframe {
-        width: 100%;
+      ul > li {
+        list-style: none;
       }
       #hidden {
         font-size: 16px;
@@ -32,24 +37,30 @@
         color: #515767;
         margin-top: 10px;
       }
+      #resume-main {
+        margin-top: 80px;
+      }
     </style>
   </head>
   <body>
     <section id="resume">
-      <div>
-        <iframe src="./components/HeaderInfo.html" frameborder="0"></iframe>
-      </div>
-      <div>
-        <!-- 主体信息 -->
-        <iframe src="./components/MainInfo.html" frameborder="0"></iframe>
-      </div>
+      <!-- 简介 -->
+      <div id="resume-head"></div>
+      <!-- 主体信息 -->
+      <div id="resume-main"></div>
     </section>
     <section id="hidden">
       <p>在线简历暂不对外开放～</p>
       <p class="go">正在前往个人主页...</p>
     </section>
   </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
+    $(function () {
+      $('#resume-head').load('./components/HeaderInfo.html');
+      $('#resume-main').load('./components/MainInfo.html');
+    });
+
     const goBlog = () => {
       setTimeout(() => {
         const url = 'https://www.looseli.top';
@@ -57,11 +68,11 @@
       }, 3000);
     };
 
-    const show = false;
+    const showResume = true;
 
     let resumeEl = document.getElementById('resume');
     let hiddenEl = document.getElementById('hidden');
-    if (!show) {
+    if (!showResume) {
       hiddenEl.style.display = 'visible';
       resumeEl.parentNode.removeChild(resumeEl);
       goBlog();
@@ -69,5 +80,9 @@
       resumeEl.style.display = 'visible';
       hiddenEl.parentNode.removeChild(hiddenEl);
     }
+
+    document.oncontextmenu = function () {
+      return false;
+    };
   </script>
 </html>
