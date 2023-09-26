@@ -3,16 +3,18 @@
   <head>
     <style type="text/css">
       .header-info {
-        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
       .name {
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 600;
-        color: #252933;
+        color: #262626;
       }
       .contact {
         font-size: 14px;
-        color: #515767;
+        color: #595959;
         margin: 8px 0 2px;
       }
       .line {
@@ -20,15 +22,26 @@
       }
       .link {
         font-size: 14px;
-        color: #515767;
+        color: #595959;
+      }
+      .picture {
+        width: 60px;
+      }
+      .img-picture {
+        width: 100%;
       }
     </style>
   </head>
   <body>
     <section class="header-info">
-      <p class="name">测试</p>
-      <p class="contact"><span>18812345678</span><span class="line">|</span><span>loose.li@foxmail.com</span></p>
-      <p class="link">个人主页：https://www.looseli.top</p>
+      <div>
+        <p class="name">测试</p>
+        <p class="contact"><span>18812345678</span><span class="line">|</span><span>loose.li@foxmail.com</span></p>
+        <p class="link">个人主页：https://www.looseli.top</p>
+      </div>
+      <div class="picture">
+        <img class="img-picture" src="../avatar.jpg" alt="" />
+      </div>
     </section>
   </body>
 </html>
