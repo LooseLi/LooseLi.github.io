@@ -12,7 +12,7 @@
         color: #597ef7;
         margin-bottom: 15px;
       }
-      .ul-list {
+      ul {
         /* color: rgba(0, 0, 0, 0.8); */
         color: #262626;
         font-size: 13px;
@@ -23,6 +23,7 @@
         position: relative;
         padding-left: 12px;
         margin-top: 10px;
+        list-style: none;
       }
       .ul-list > li::before {
         position: absolute;
@@ -36,6 +37,12 @@
         background: #262626;
         line-height: 20px;
         flex-shrink: 0;
+      }
+      .school {
+        display: flex;
+      }
+      .school > p {
+        flex: 1;
       }
     </style>
   </head>
@@ -54,14 +61,21 @@
     </section>
     <section class="wrap">
       <h4 class="title">工作经历</h4>
-      <ul class="ul-list">
-        <li>熟悉Vue全家桶，并有前后端分离项目开发经验；了解React；</li>
-        <li>熟悉ES6新特性；</li>
-        <li>熟悉第三方组件库，如Element-ui、Antd等；有独立封装组件库的经验；</li>
-        <li>熟悉Git版本管理工具，了解SVN；</li>
-        <li>了解Vue部分源码；</li>
-        <li>了解Node.js，有Node.js开发简单项目经验；</li>
-        <li>了解服务器端渲染，有利用Nuxt框架开发项目经验；</li>
+      <ul>
+        <li>
+          <div class="school">
+            <p>2020.06 - 2021.04</p>
+            <p>苏州企享汇信息科技有限公司</p>
+            <p>前端开发工程师</p>
+          </div>
+          <!-- <div>
+            工作内容：
+参与多个项目的前端开发工作
+项目性能优化
+迭代项目，提高代码质量
+成果：完成多个项目并成功上线；获优秀员工称号;
+          </div> -->
+        </li>
       </ul>
     </section>
     <section class="wrap">
@@ -77,15 +91,16 @@
       </ul>
     </section>
     <section class="wrap">
-      <h4 class="title">教育背景</h4>
-      <ul class="ul-list">
-        <li>熟悉Vue全家桶，并有前后端分离项目开发经验；了解React；</li>
-        <li>熟悉ES6新特性；</li>
-        <li>熟悉第三方组件库，如Element-ui、Antd等；有独立封装组件库的经验；</li>
-        <li>熟悉Git版本管理工具，了解SVN；</li>
-        <li>了解Vue部分源码；</li>
-        <li>了解Node.js，有Node.js开发简单项目经验；</li>
-        <li>了解服务器端渲染，有利用Nuxt框架开发项目经验；</li>
+      <h4 class="title">教育经历</h4>
+      <ul>
+        <li>
+          <div class="school">
+            <p>2016.09 - 2020.06</p>
+            <p>江苏理工学院</p>
+            <p>数字媒体技术（本科）</p>
+          </div>
+          <p>主修课程：数据结构、计算机组成原理、计算机图形学、数据库原理与应用、计算机网络、程序设计、WEB前端开发、软件工程等。</p>
+        </li>
       </ul>
     </section>
   </body>
