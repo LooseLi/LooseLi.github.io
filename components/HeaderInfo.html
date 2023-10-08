@@ -12,17 +12,20 @@
         font-weight: 600;
         color: #262626;
       }
-      .contact {
+      .info {
         font-size: 14px;
         color: #595959;
         margin: 8px 0 2px;
+        display: flex;
+      }
+      .icon {
+        width: 15px;
+        height: 15px;
+        position: relative;
+        top: 2px;
       }
       .line {
         margin: 0 10px;
-      }
-      .link {
-        font-size: 14px;
-        color: #595959;
       }
       .picture {
         width: 60px;
@@ -35,9 +38,29 @@
   <body>
     <section class="header-info">
       <div>
-        <p class="name">测试</p>
-        <p class="contact"><span>18812345678</span><span class="line">|</span><span>loose.li@foxmail.com</span></p>
-        <p class="link">个人主页：https://www.looseli.top</p>
+        <p class="name">leeson</p>
+        <div class="info identity">
+          <div>前端开发工程师</div>
+          <span class="line">|</span>
+          <div>开源项目贡献者</div>
+        </div>
+        <div class="info">
+          <div>
+            <img class="icon" src="../images/icon-envelope.svg" alt="" />
+            <span>loose.li@foxmail.com</span>
+          </div>
+          <span class="line">|</span>
+          <div>
+            <img class="icon" src="../images/icon-phone.svg" alt="" />
+            <span>18812345678</span>
+          </div>
+        </div>
+        <div class="info">
+          <div>
+            <img class="icon" src="../images/icon-blog.svg" alt="" />
+            <span>https://www.looseli.top</span>
+          </div>
+        </div>
       </div>
       <div class="picture">
         <img class="img-picture" src="../avatar.jpg" alt="" />
