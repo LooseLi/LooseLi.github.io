@@ -38,6 +38,17 @@
         line-height: 20px;
         flex-shrink: 0;
       }
+      .project-name {
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .project {
+        margin-top: 5px;
+      }
+      .project-content > li {
+        margin-left: 15px;
+        margin-top: 0;
+      }
       .school {
         display: flex;
       }
@@ -80,7 +91,24 @@
     </section>
     <section class="wrap">
       <h4 class="title">项目经历</h4>
-      <ul class="ul-list"></ul>
+      <ul class="projects-wrap">
+        <li>
+          <p class="project-name">CRM系统</p>
+          <section class="project">
+            <p>负责内容：</p>
+            <ul class="ul-list project-content">
+              <li>负责解决系统中存在的前端代码问题及Bug</li>
+              <li>负责系统中部分模块重写工作</li>
+            </ul>
+          </section>
+          <section class="project">
+            <p>项目难点：</p>
+            <ul>
+              <li>某些模块中数据的处理较为复杂，需考虑的情况较多</li>
+            </ul>
+          </section>
+        </li>
+      </ul>
     </section>
     <section class="wrap">
       <h4 class="title">教育经历</h4>
